@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 with open('train_delay_model.pkl', 'rb') as f:
-    model_pipeline = pickle.load(f)
+    model_pipeline = joblib.load(f)
 
 st.title("Train Delay Predictor")
 
