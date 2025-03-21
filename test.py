@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.pipeline import Pipeline
 with open('train_delay_model.pkl', 'rb') as f:
     model_pipeline = joblib.load(f)
 
